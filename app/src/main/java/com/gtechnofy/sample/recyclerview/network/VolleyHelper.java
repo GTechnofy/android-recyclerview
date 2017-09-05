@@ -10,6 +10,8 @@ import com.android.volley.toolbox.Volley;
 import com.gtechnofy.sample.recyclerview.MyApplication;
 import com.gtechnofy.sample.recyclerview.constants.Constants;
 
+import org.json.JSONObject;
+
 /**
  * Created by ggupta on 8/31/17 3:38 PM.
  */
@@ -41,7 +43,7 @@ public class VolleyHelper {
     public static VolleyHelper getsInstance() {
 
         if(sInstance == null) {
-            synchronized ((sInstance)) {
+            synchronized (VolleyHelper.class) {
                 if(sInstance == null) {
                     sInstance = new VolleyHelper();
                 }
@@ -61,7 +63,7 @@ public class VolleyHelper {
         return mImageLoader;
     }
 
-    public void addToRequestQueue(Request<Object> request) {
+    public void addToRequestQueue(Request request) {
         getsRequestQueue().add(request);
     }
 }

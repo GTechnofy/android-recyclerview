@@ -7,4 +7,7 @@ package com.gtechnofy.sample.recyclerview.constants;
 public class Constants {
 
     public static final int IMAGE_CACHE_SIZE = 5 * 1024;  // 5 MB LruCache(sizeinKB)
+
+    public static final String SEARCH_TYPE_BOLLYWOOD    = "bollywood";
+    public static final String SEARCH_TYPE_SPORTS       = "sports";
 }
